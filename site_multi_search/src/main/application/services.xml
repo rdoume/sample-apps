@@ -17,7 +17,7 @@
   </container>
 
   <content id='site' version='1.0'>
-    <redundancy>2</redundancy>
+    <redundancy>1</redundancy>
     <search>
       <visibility-delay>1.0</visibility-delay>
     </search>
@@ -27,13 +27,16 @@
 
     <nodes>
       <node hostalias="content0" distribution-key="0"/>
-      <node hostalias="content1" distribution-key="1"/>
-      <node hostalias="content2" distribution-key="2"/>
     </nodes>
 
     <engine>
       <proton>
         <searchable-copies>1</searchable-copies>
+        <resource-limits>
+          <disk>0.99</disk>
+          <memory>0.95</memory>
+        </resource-limits>
+
       </proton>
     </engine>
   </content>

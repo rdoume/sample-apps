@@ -2,3 +2,5 @@
 *.idea
 *~
 .vagrant/
+
+site_multi_search/outb\.json
