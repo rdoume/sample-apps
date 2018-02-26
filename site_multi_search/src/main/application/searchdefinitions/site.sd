@@ -34,7 +34,7 @@ search site {
         field text_length type int {
             indexing: summary
         }
-        field id type int {
+        field id type string {
             indexing: summary
         }
 
