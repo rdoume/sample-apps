@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
 <hosts>
-  <host name="vespa0">
+  <host name="cloud-es06">
     <alias>node0</alias>
     <alias>admin0</alias>
     <alias>stateless0</alias>
   </host>
-  <host name="vespa1">
+  <host name="cloud-es07">
     <alias>node1</alias>
     <alias>stateless1</alias>
   </host>
-  <host name="vespa2">
+  <host name="cloud-es08">
     <alias>vespa2</alias>
     <alias>content0</alias>
+  </host>
+  <host name="cloud-es09">
+    <alias>vespa4</alias>
+    <alias>content1</alias>
   </host>
 </hosts>
