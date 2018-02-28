@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
+<services version='1.0'>
+  <admin version="2.0">
+    <adminserver hostalias="cloud_vespa00"/>
+    <adminserver hostalias="cloud_vespa10"/>
+    <configservers>
+      <configserver hostalias="cloud_vespa00"/>
+    </configservers>
+    <configservers>
+      <configserver hostalias="cloud_vespa10"/>
+    </configservers>
+  </admin>
+  <container id='container' version='1.0'>
+    <search/>
+    <document-api/>
+    <nodes>
+      <node hostalias="stateless0"/>
+      <node hostalias="stateless1"/>
+      <node hostalias="stateless2"/>
+      <node hostalias="stateless3"/>
+    </nodes>
+  </container>
+  <content id='site' version='1.0'>
+    <redundancy>2</redundancy>
+    <search>
+      <visibility-delay>1.0</visibility-delay>
+    </search>
+    <documents>
+      <document mode='index' type='site'/>
+    </documents>
+    <nodes>
+      <node hostalias="content0" distribution-key="0"/>
+      <node hostalias="content1" distribution-key="1"/>
+      <node hostalias="content2" distribution-key="2"/>
+      <node hostalias="content0" distribution-key="3"/>
+      <node hostalias="content1" distribution-key="4"/>
+      <node hostalias="content2" distribution-key="5"/>
+    </nodes>
+    <engine>
+      <proton>
+        <searchable-copies>1</searchable-copies>
+      </proton>
+    </engine>
+  </content>
+
+</services>

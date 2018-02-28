@@ -1,0 +1,47 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
+<hosts>
+  <host name="cloud_vespa00">
+    <alias>node0</alias>
+    <alias>admin0</alias>
+    <alias>stateless0</alias>
+  </host>
+  <host name="cloud_vespa01">
+    <alias>node1</alias>
+    <alias>stateless1</alias>
+  </host>
+  <host name="cloud_vespa02">
+    <alias>node2</alias>
+    <alias>content0</alias>
+  </host>
+  <host name="cloud_vespa03">
+    <alias>node3</alias>
+    <alias>content1</alias>
+  </host>
+  <host name="cloud_vespa04">
+    <alias>node4</alias>
+    <alias>content2</alias>
+  </host>
+  <host name="cloud_vespa10">
+    <alias>node5</alias>
+    <alias>admin1</alias>
+    <alias>stateless2</alias>
+  </host>
+  <host name="cloud_vespa11">
+    <alias>node6</alias>
+    <alias>stateless3</alias>
+  </host>
+  <host name="cloud_vespa12">
+    <alias>node7</alias>
+    <alias>content3</alias>
+  </host>
+  <host name="cloud_vespa13">
+    <alias>node8</alias>
+    <alias>content4</alias>
+  </host>
+  <host name="cloud_vespa14">
+    <alias>node9</alias>
+    <alias>content5</alias>
+  </host>
+</hosts>
