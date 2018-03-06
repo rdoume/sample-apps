@@ -1,45 +1,56 @@
+GNU nano 2.7.4                                                                 File: /home/vespa/sample-apps/site_multi_search/src/main/application/services.xml
 
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
 <services version='1.0'>
-  <admin version="2.0">
-      <adminserver hostalias="admin0"/>
-      <configservers>
-        <configserver hostalias="admin0"/>
+<admin version="2.0">
+    <adminserver hostalias="admin0"/>
+    <configservers>
+      <configserver hostalias="admin0"/>
       </configservers>
-    </admin>
-  <container id='container' version='1.0'>
-    <search/>
-    <document-api/>
-    <nodes>
-      <node hostalias="stateless0"/>
-      <node hostalias="stateless1"/>
-    </nodes>
-  </container>
 
-  <content id='site' version='1.0'>
-    <redundancy>1</redundancy>
-    <search>
-      <visibility-delay>1.0</visibility-delay>
-    </search>
-    <documents>
-      <document mode='index' type='site'/>
-    </documents>
+<slobroks>
+  <slobrok hostalias="stateless0"/>
+</slobroks>
+  </admin>
 
-    <nodes>
-      <node hostalias="content0" distribution-key="0"/>
-    </nodes>
+<container id='container' version='1.0'>
+  <search/>
+      <document-api>
+    <tracelevel>3</tracelevel>
+  </document-api>
+  <nodes>
+    <node hostalias="stateless0"/>
+    <node hostalias="stateless1"/>
+    <node hostalias="stateless2"/>
+    <node hostalias="stateless3"/>
+    <node hostalias="stateless4"/>
+  </nodes>
+</container>
 
-    <engine>
-      <proton>
-        <searchable-copies>1</searchable-copies>
-        <resource-limits>
-          <disk>0.99</disk>
-          <memory>0.95</memory>
-        </resource-limits>
+<content id='site' version='1.0'>
+  <redundancy>2</redundancy>
+  <search>
+    <visibility-delay>4</visibility-delay>
+  </search>
+  <documents>
+    <document mode='index' type='site'/>
+  </documents>
 
-      </proton>
-    </engine>
-  </content>
-
-</services>
+  <nodes>
+    <node hostalias="content0" distribution-key="0"/>
+    <node hostalias="content3" distribution-key="3"/>
+    <node hostalias="content4" distribution-key="4"/>
+    <node hostalias="content1" distribution-key="1"/>
+    <node hostalias="content2" distribution-key="2"/>
+  </nodes>
+  <engine>
+    <proton>
+      <searchable-copies>1</searchable-copies>
+      <resource-limits>
+        <disk>0.99</disk>
+        <memory>0.95</memory>
+       </resource-limits>
+          </proton>
+        </engine>
+      </content>
