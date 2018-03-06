@@ -41,6 +41,9 @@ search site {
         field lang type string {
             indexing: summary
         }
+   	field pagerank type int {
+            indexing: summary | attribute
+        }
 
 
     }
