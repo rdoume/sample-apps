@@ -31,7 +31,7 @@
   </container>
 
   <content id='site' version='1.0'>
-    <redundancy>1</redundancy>
+    <redundancy>2</redundancy>
     <search>
       <visibility-delay>4.0</visibility-delay>
     </search>
