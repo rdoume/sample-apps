@@ -44,7 +44,8 @@ GNU nano 2.7.4                                                                 F
     <node hostalias="content1" distribution-key="1"/>
     <node hostalias="content2" distribution-key="2"/>
   </nodes>
-  <engine>
+      <engine>
+    <name></name>
     <proton>
       <searchable-copies>1</searchable-copies>
       <resource-limits>
@@ -53,5 +54,6 @@ GNU nano 2.7.4                                                                 F
        </resource-limits>
           </proton>
         </engine>
+
       </content>
     </services>
