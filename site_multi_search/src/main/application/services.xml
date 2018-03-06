@@ -5,7 +5,7 @@
       <adminserver hostalias="admin0"/>
       <configservers>
         <configserver hostalias="admin0"/>
-                </configservers>
+        </configservers>
 
   <slobroks>
     <slobrok hostalias="stateless0" />
@@ -23,9 +23,12 @@
       <node hostalias="stateless3"/>
       <node hostalias="stateless4"/>
     </nodes>
-     <config name="search.config.qr-start">
+  <config name="config.docproc.docproc">
+    <numthreads>96</numthreads>
+  </config>
+    <config name="search.config.qr-start">
       <jvm>
-       <heapsize>32768</heapsize>
+       <heapsize>15000</heapsize>
       </jvm>
      </config>
   </container>
@@ -33,7 +36,7 @@
   <content id='site' version='1.0'>
     <redundancy>2</redundancy>
     <search>
-      <visibility-delay>4.0</visibility-delay>
+      <visibility-delay>1.0</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
