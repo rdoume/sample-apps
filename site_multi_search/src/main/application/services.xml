@@ -40,8 +40,10 @@
     </search>
     <documents>
       <document mode='index' type='site'/>
-    </documents>
-
+</documents>
+<tuning>
+ <bucket-splitting max-documents= "15000" max-size="90000000"/>
+ </tuning>
     <nodes>
       <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content1" distribution-key="1"/>
