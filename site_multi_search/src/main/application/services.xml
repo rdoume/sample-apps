@@ -31,6 +31,7 @@
        <heapsize>15000</heapsize>
       </jvm>
      </config>
+   <document-processing preferlocalnode="true"/>
   </container>
 
   <content id='site' version='1.0'>
