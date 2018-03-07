@@ -35,9 +35,9 @@
   </container>
 
   <content id='site' version='1.0'>
-    <redundancy>2</redundancy>
+    <redundancy>1</redundancy>
     <search>
-      <visibility-delay>4.0</visibility-delay>
+      <visibility-delay>30</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
