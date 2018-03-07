@@ -28,7 +28,7 @@
   </config>
     <config name="search.config.qr-start">
       <jvm>
-       <heapsize>15000</heapsize>
+       <heapsize>32000</heapsize>
       </jvm>
      </config>
    <document-processing preferlocalnode="true"/>
@@ -63,7 +63,7 @@
       <tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.8</concurrency>
+          <concurrency>1</concurrency>
         </feeding>
         </searchnode>
      </tuning>
