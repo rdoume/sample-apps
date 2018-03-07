@@ -43,7 +43,6 @@
       <document mode='index' type='site'/>
 </documents>
 <tuning>
- <bucket-splitting max-documents= "15000" max-size="90000000"/>
  </tuning>
     <nodes>
       <node hostalias="content0" distribution-key="0"/>
@@ -63,7 +62,7 @@
       <tuning>
         <searchnode>
         <feeding>
-          <concurrency>1</concurrency>
+          <concurrency>0.5</concurrency>
         </feeding>
         </searchnode>
      </tuning>
