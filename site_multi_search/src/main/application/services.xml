@@ -62,7 +62,7 @@
       <tuning>
         <searchnode>
         <feeding>
-          <concurrency>1</concurrency>
+          <concurrency>0.5</concurrency>
         </feeding>
         </searchnode>
      </tuning>
