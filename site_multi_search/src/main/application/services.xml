@@ -6,17 +6,14 @@
       <configservers>
         <configserver hostalias="admin0"/>
         </configservers>
-
-  <slobroks>
-    <slobrok hostalias="stateless0" />
-  </slobroks>
-
     </admin>
 
   <container id='container' version='1.0'>
     <search/>
     <document-api/>
     <nodes>
+      <node hostalias="stateless0"/>
+      <node hostalias="stateless1"/>
       <node hostalias="stateless2"/>
       <node hostalias="stateless3"/>
       <node hostalias="stateless4"/>
@@ -30,12 +27,14 @@
       <visibility-delay>10</visibility-delay>
     </search>
     <documents>
-      <document mode='index' type='site_light'/>
+      <document mode='index' type='site'/>
 </documents>
 <tuning>
  </tuning>
     <nodes>
       <node hostalias="content0" distribution-key="0"/>
+      <node hostalias="content3" distribution-key="3"/>
+      <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content1" distribution-key="1"/>
       <node hostalias="content4" distribution-key="4"/>
     </nodes>
@@ -50,7 +49,7 @@
       <tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.5</concurrency>
+          <concurrency>0.8</concurrency>
         </feeding>
         </searchnode>
      </tuning>
