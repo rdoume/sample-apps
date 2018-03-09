@@ -30,7 +30,7 @@
       <visibility-delay>10</visibility-delay>
     </search>
     <documents>
-      <document mode='index' type='site'/>
+      <document mode='index' type='site_light'/>
 </documents>
 <tuning>
  </tuning>
@@ -59,4 +59,3 @@
   </content>
 
 </services>
-
