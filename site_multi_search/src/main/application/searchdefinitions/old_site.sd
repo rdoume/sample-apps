@@ -54,7 +54,7 @@ search site {
     }
 
 
-    rank-profile post inherits default {
+    rank-profile posted inherits default {
 
         first-phase {
             expression:nativeRank(title, text)
