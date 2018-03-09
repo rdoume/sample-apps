@@ -3,7 +3,7 @@ search site {
 
 
 
-document site_light {
+document site {
 
         field text type string {
             indexing: summary | index
@@ -12,8 +12,13 @@ document site_light {
         field title type string {
             indexing: summary | index
         }
+        field uri type string {
+              indexing: summary
+        }
+
 
     }
+
 
     fieldset default {
         fields: title, text

@@ -27,7 +27,7 @@
       <visibility-delay>10</visibility-delay>
     </search>
     <documents>
-      <document mode='index' type='site_light'/>
+      <document mode='index' type='site'/>
 </documents>
 <tuning>
  </tuning>
