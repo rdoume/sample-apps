@@ -28,7 +28,9 @@
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
-    </nodes>
+      <node hostalias="content4" distribution-key="4"/>
+
+ </nodes>
 
     <engine>
       <proton>
