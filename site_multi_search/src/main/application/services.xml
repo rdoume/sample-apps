@@ -9,39 +9,41 @@
     </admin>
 
   <container id='container' version='1.0'>
+    <config name="config.docproc.docproc">
+    	<numthreads>64</numthreads>
+    </config>
+     <config name="search.config.qr-start">
+    <jvm>
+      <heapsize>8192</heapsize>
+    </jvm>
+  </config>
     <search/>
     <document-api/>
     <nodes>
-      <node hostalias="stateless0"/>
       <node hostalias="stateless1"/>
-      <node hostalias="stateless2"/>
-      <node hostalias="stateless3"/>
-      <node hostalias="stateless4"/>
     </nodes>
-   <document-processing preferlocalnode="true"/>
+    <document-processing preferlocalnode="true"/>
   </container>
 
   <content id='site' version='1.0'>
-    <redundancy>2</redundancy>
+    <redundancy>1</redundancy>
     <search>
-      <visibility-delay>10</visibility-delay>
+      <visibility-delay>30</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
-</documents>
-<tuning>
- </tuning>
+    </documents>
+    <tuning>
+	<bucket-splitting max-documents="16000" max-size="1024000000"/>
+    </tuning>
     <nodes>
-      <node hostalias="content0" distribution-key="0"/>
-      <node hostalias="content3" distribution-key="3"/>
       <node hostalias="content2" distribution-key="2"/>
-      <node hostalias="content1" distribution-key="1"/>
-      <node hostalias="content4" distribution-key="4"/>
     </nodes>
 
     <engine>
       <proton>
         <searchable-copies>1</searchable-copies>
+        <visibility-delay>30</visibility-delay>
         <resource-limits>
           <disk>0.99</disk>
           <memory>0.95</memory>
@@ -51,6 +53,31 @@
         <feeding>
           <concurrency>0.8</concurrency>
         </feeding>
+	<index>
+		<io>
+			<write>normal</write>
+			<read>normal</read>
+		</io>
+	</index>
+	<summary>
+		<io>
+			<write>normal</write>
+		</io>
+		<store>
+			<cache>
+				<compression>
+					<type>lz4</type>
+				</compression>
+			</cache>
+			<logstore>
+				<chunk>
+					<compression>
+						<type>lz4</type>
+					</compression>
+				</chunk>
+			</logstore>
+		</store>
+	</summary>
         </searchnode>
      </tuning>
       </proton>
