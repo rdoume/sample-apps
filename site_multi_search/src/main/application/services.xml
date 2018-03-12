@@ -7,16 +7,8 @@
         <configserver hostalias="admin0"/>
         </configservers>
     </admin>
-
-  <container id='container' version='1.0'>
-    <config name="config.docproc.docproc">
-    	<numthreads>64</numthreads>
-    </config>
-     <config name="search.config.qr-start">
-    <jvm>
-      <heapsize>8192</heapsize>
-    </jvm>
-  </config>
+ 
+ <container id='container' version='1.0'>
     <search/>
     <document-api/>
     <nodes>
@@ -28,14 +20,11 @@
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
     <search>
-      <visibility-delay>30</visibility-delay>
+      <visibility-delay>1</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
     </documents>
-    <tuning>
-	<bucket-splitting max-documents="16000" max-size="1024000000"/>
-    </tuning>
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
     </nodes>
@@ -43,18 +32,11 @@
     <engine>
       <proton>
         <searchable-copies>1</searchable-copies>
-        <visibility-delay>30</visibility-delay>
+        <visibility-delay>1</visibility-delay>
         <resource-limits>
           <disk>0.99</disk>
           <memory>0.95</memory>
          </resource-limits>
-      <tuning>
-        <searchnode>
-        <feeding>
-          <concurrency>0.8</concurrency>
-        </feeding>
-        </searchnode>
-     </tuning>
       </proton>
     </engine>
   </content>
