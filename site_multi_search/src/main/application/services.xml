@@ -53,31 +53,6 @@
         <feeding>
           <concurrency>0.8</concurrency>
         </feeding>
-	<index>
-		<io>
-			<write>normal</write>
-			<read>normal</read>
-		</io>
-	</index>
-	<summary>
-		<io>
-			<write>normal</write>
-		</io>
-		<store>
-			<cache>
-				<compression>
-					<type>lz4</type>
-				</compression>
-			</cache>
-			<logstore>
-				<chunk>
-					<compression>
-						<type>lz4</type>
-					</compression>
-				</chunk>
-			</logstore>
-		</store>
-	</summary>
         </searchnode>
      </tuning>
       </proton>
