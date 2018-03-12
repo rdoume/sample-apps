@@ -20,13 +20,14 @@
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
     <search>
-      <visibility-delay>1</visibility-delay>
+      <visibility-delay>5</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
     </documents>
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
+      <node hostalias="content3" distribution-key="3"/>
     </nodes>
 
     <engine>
