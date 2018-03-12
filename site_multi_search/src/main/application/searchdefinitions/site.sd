@@ -6,12 +6,14 @@ search site {
 document site {
 
         field text type string {
-            indexing: summary | index
+            indexing: summary | index | lowercase 
+	    stemming: none
         }
 
         field title type string {
             indexing: summary | index
         }
+
         field uri type string {
               indexing: summary
         }

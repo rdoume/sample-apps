@@ -7,37 +7,30 @@
         <configserver hostalias="admin0"/>
         </configservers>
     </admin>
-
-  <container id='container' version='1.0'>
+ 
+ <container id='container' version='1.0'>
     <search/>
     <document-api/>
     <nodes>
-      <node hostalias="stateless0"/>
       <node hostalias="stateless1"/>
-      <node hostalias="stateless2"/>
-      <node hostalias="stateless3"/>
-      <node hostalias="stateless4"/>
     </nodes>
-   <document-processing preferlocalnode="true"/>
+    <document-processing preferlocalnode="true"/>
   </container>
 
   <content id='site' version='1.0'>
-    <redundancy>2</redundancy>
+    <redundancy>1</redundancy>
     <search>
-      <visibility-delay>10</visibility-delay>
+      <visibility-delay>5</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
-</documents>
-<tuning>
- </tuning>
+    </documents>
     <nodes>
-      <node hostalias="content0" distribution-key="0"/>
-      <node hostalias="content3" distribution-key="3"/>
       <node hostalias="content2" distribution-key="2"/>
-      <node hostalias="content1" distribution-key="1"/>
+      <node hostalias="content3" distribution-key="3"/>
       <node hostalias="content4" distribution-key="4"/>
-    </nodes>
+
+ </nodes>
 
     <engine>
       <proton>
@@ -46,10 +39,10 @@
           <disk>0.99</disk>
           <memory>0.95</memory>
          </resource-limits>
-      <tuning>
+ 	<tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.8</concurrency>
+          <concurrency>0.5</concurrency>
         </feeding>
         </searchnode>
      </tuning>
