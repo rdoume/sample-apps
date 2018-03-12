@@ -20,7 +20,7 @@
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
     <search>
-      <visibility-delay>20</visibility-delay>
+      <visibility-delay>1</visibility-delay>
     </search>
     <documents>
       <document mode='index' type='site'/>
@@ -32,11 +32,17 @@
     <engine>
       <proton>
         <searchable-copies>1</searchable-copies>
-        <visibility-delay>1</visibility-delay>
         <resource-limits>
           <disk>0.99</disk>
           <memory>0.95</memory>
          </resource-limits>
+ 	<tuning>
+        <searchnode>
+        <feeding>
+          <concurrency>0.5</concurrency>
+        </feeding>
+        </searchnode>
+     </tuning>
       </proton>
     </engine>
   </content>
