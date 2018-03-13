@@ -6,7 +6,7 @@ search site {
 document site {
 
         field text type string {
-          indexing: index  
+            
         }
 
         field title type string {
@@ -21,19 +21,14 @@ document site {
     }
 
 
-    
-    fieldset default {
-        fields: title, text
-    }
-
-
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(title, text)
+            expression:nativeRank(title)
         }
 
     }
+
 
 
  
