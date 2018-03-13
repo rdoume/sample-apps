@@ -13,8 +13,7 @@
     <document-api/>
     <nodes>
       <node hostalias="stateless1"/>
-      <node hostalias="stateless2"/>
-      <node hostalias="stateless4"/>   
+      <node hostalias="stateless2"/>   
  </nodes>
     <document-processing preferlocalnode="true"/>
   </container>
@@ -28,6 +27,7 @@
     <nodes>
       <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content3" distribution-key="3"/>
+     <node hostalias="content4" distribution-key="4"/>
  </nodes>
 
     <engine>
