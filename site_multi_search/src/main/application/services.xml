@@ -10,7 +10,9 @@
  
  <container id='container' version='1.0'>
     <search/>
-    <document-api/>
+   <document-api>
+<maxpendingbytes>409600000</maxpendingbytes>
+ </document-api>
     <nodes>
       <node hostalias="stateless1"/>
       <node hostalias="stateless0"/>
@@ -20,7 +22,9 @@
 
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
-    
+    <search>
+      <visibility-delay>30</visibility-delay>
+    </search>    
          <documents>
       <document mode='index' type='site'/>
     </documents>
@@ -41,7 +45,7 @@
  	<tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.5</concurrency>
+          <concurrency>1</concurrency>
         </feeding>
         </searchnode>
      </tuning>
