@@ -14,7 +14,8 @@
     <nodes>
       <node hostalias="stateless1"/>
       <node hostalias="stateless2"/>
-    </nodes>
+      <node hostalias="stateless4"/>   
+ </nodes>
     <document-processing preferlocalnode="true"/>
   </container>
 
