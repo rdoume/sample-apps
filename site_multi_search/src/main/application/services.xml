@@ -13,6 +13,7 @@
     <document-api/>
     <nodes>
       <node hostalias="stateless1"/>
+      <node hostalias="stateless2"/>
     </nodes>
     <document-processing preferlocalnode="true"/>
   </container>
@@ -29,8 +30,20 @@
  </nodes>
 
     <engine>
-      <dummy>
-      </dummy>
+      <proton>
+        <searchable-copies>1</searchable-copies>
+        <resource-limits>
+          <disk>0.99</disk>
+          <memory>0.95</memory>
+         </resource-limits>
+ 	<tuning>
+        <searchnode>
+        <feeding>
+          <concurrency>0.5</concurrency>
+        </feeding>
+        </searchnode>
+     </tuning>
+      </proton>
     </engine>
   </content>
 
