@@ -15,7 +15,7 @@
       <node hostalias="stateless1"/>
       <node hostalias="stateless0"/>
     </nodes>
-    <document-processing preferlocalnode="true"/>
+  
   </container>
 
   <content id='site' version='1.0'>
@@ -27,6 +27,8 @@
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
+ 
+<node hostalias="content4" distribution-key="4"/>
  </nodes>
 
     <engine>
