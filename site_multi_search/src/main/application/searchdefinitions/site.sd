@@ -2,36 +2,25 @@
 search site {
 
 
-
 document site {
 
         field text type string {
-            indexing: summary  | lowercase 
-	    stemming: none
+            
         }
 
         field title type string {
-            indexing: summary 
+           
         }
 
         field uri type string {
-              indexing: summary
-        }
+                    }
 
 
     }
 
 
-    fieldset default {
-        fields: title, text
-    }
 
-    rank-profile post inherits default {
 
-        first-phase {
-            expression:nativeRank(title, text)
-        }
 
-    }
-
+ 
 }

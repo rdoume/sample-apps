@@ -22,7 +22,7 @@
     <redundancy>1</redundancy>
     
          <documents>
-      <document mode='store-only' type='site'/>
+      <document mode='index' type='site'/>
     </documents>
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
