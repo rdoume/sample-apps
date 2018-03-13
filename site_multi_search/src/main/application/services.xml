@@ -41,7 +41,7 @@
  	<tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.5</concurrency>
+          <concurrency>1</concurrency>
         </feeding>
         </searchnode>
      </tuning>
