@@ -6,10 +6,7 @@ search site {
 document site {
 
         field text type string {
-        indexing:  input text | index text
-	normalizing: none
-	stemming:none
-	indexing-rewrite:none    
+            
         }
 
         field title type string {
