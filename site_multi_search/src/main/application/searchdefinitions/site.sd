@@ -21,6 +21,13 @@ document site {
     }
 
 
+    rank-profile post inherits default {
+
+        first-phase {
+            expression:nativeRank(title)
+        }
+
+    }
 
 
 
