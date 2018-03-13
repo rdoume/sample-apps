@@ -16,7 +16,6 @@
  </document-api>
     <nodes>
       <node hostalias="stateless1"/>
-      <node hostalias="stateless0"/>
     </nodes>
   
   </container>
@@ -32,7 +31,8 @@
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
- 
+ <node hostalias="content0" distribution-key="0"/>
+
 <node hostalias="content4" distribution-key="4"/>
  </nodes>
 
