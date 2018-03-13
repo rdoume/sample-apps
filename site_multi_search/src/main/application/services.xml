@@ -10,7 +10,9 @@
  
  <container id='container' version='1.0'>
     <search/>
-    <document-api/>
+   <document-api>
+<maxpendingbytes>409600000</maxpendingbytes>
+ </document-api>
     <nodes>
       <node hostalias="stateless1"/>
       <node hostalias="stateless0"/>
