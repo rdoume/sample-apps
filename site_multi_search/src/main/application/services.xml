@@ -22,7 +22,7 @@
     <redundancy>1</redundancy>
     <search>
       <visibility-delay>30</visibility-delay>
-    </search    
+    </search>    
          <documents>
       <document mode='index' type='site'/>
     </documents>
