@@ -12,9 +12,9 @@
     <search/>
     <document-api/>
     <nodes>
-      <node hostalias="stateless1"/> 
-      <node hostalias="stateless4"/>
- </nodes>
+      <node hostalias="stateless1"/>
+      <node hostalias="stateless2"/>
+    </nodes>
     <document-processing preferlocalnode="true"/>
   </container>
 
@@ -26,7 +26,6 @@
     </documents>
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
-      <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content3" distribution-key="3"/>
  </nodes>
 
