@@ -13,23 +13,21 @@
     <document-api/>
     <nodes>
       <node hostalias="stateless1"/>
-    </nodes>
+      <node hostalias="stateless2"/>
+      <node hostalias="stateless4"/>   
+ </nodes>
     <document-processing preferlocalnode="true"/>
   </container>
 
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
-    <search>
-      <visibility-delay>30</visibility-delay>
-    </search>
-    <documents>
+    
+         <documents>
       <document mode='index' type='site'/>
     </documents>
     <nodes>
-      <node hostalias="content2" distribution-key="2"/>
+      <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content3" distribution-key="3"/>
-      <node hostalias="content4" distribution-key="4"/>
-
  </nodes>
 
     <engine>
