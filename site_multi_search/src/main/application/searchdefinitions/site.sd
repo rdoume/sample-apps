@@ -6,7 +6,8 @@ search site {
 document site {
 
         field text type string {
-          indexing: index  
+          indexing:  index 
+	    
         }
 
         field title type string {
