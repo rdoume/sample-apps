@@ -21,14 +21,19 @@ document site {
     }
 
 
+    
+    fieldset default {
+        fields: title, text
+    }
+
+
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(text,title)
+            expression:nativeRank(title, text)
         }
 
     }
-
 
 
  
