@@ -6,7 +6,10 @@ search site {
 document site {
 
         field text type string {
-        indexing: index    
+        indexing:  input text | index text
+	normalizing: none
+	stemming:none
+	indexing-rewrite:none    
         }
 
         field title type string {
@@ -24,7 +27,7 @@ document site {
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(text,title)
+            expression:nativeRank(title)
         }
 
     }
