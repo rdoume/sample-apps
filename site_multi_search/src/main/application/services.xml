@@ -48,6 +48,9 @@
         <feeding>
           <concurrency>1</concurrency>
         </feeding>
+	<resizing>
+    		<initialdocumentcount>1000000000</initialdocumentcount>
+	</resizing>
         </searchnode>
      </tuning>
       </proton>
