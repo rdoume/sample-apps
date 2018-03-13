@@ -13,7 +13,7 @@
     <document-api/>
     <nodes>
       <node hostalias="stateless1"/>
-      <node hostalias="stateless2"/>
+      <node hostalias="stateless0"/>
     </nodes>
     <document-processing preferlocalnode="true"/>
   </container>
