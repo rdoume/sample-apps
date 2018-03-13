@@ -19,33 +19,18 @@
 
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
-    <search>
-      <visibility-delay>30</visibility-delay>
-    </search>
-    <documents>
-      <document mode='index' type='site'/>
+    
+         <documents>
+      <document mode='store-only' type='site'/>
     </documents>
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
-
  </nodes>
 
     <engine>
-      <proton>
-        <searchable-copies>1</searchable-copies>
-        <resource-limits>
-          <disk>0.99</disk>
-          <memory>0.95</memory>
-         </resource-limits>
- 	<tuning>
-        <searchnode>
-        <feeding>
-          <concurrency>0.5</concurrency>
-        </feeding>
-        </searchnode>
-     </tuning>
-      </proton>
+      <dummy>
+      </dummy>
     </engine>
   </content>
 
