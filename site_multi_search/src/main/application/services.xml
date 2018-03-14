@@ -6,13 +6,6 @@
       <configservers>
         <configserver hostalias="admin0"/>
         </configservers>
-
-<cluster-controllers standalone-zookeeper="true">
-  <cluster-controller hostalias="node1" />
-  <cluster-controller hostalias="vespa2" />
-  <cluster-controller hostalias="vespa5" />
-</cluster-controllers>
-
     </admin>
  
  <container id='container' version='1.0'>
