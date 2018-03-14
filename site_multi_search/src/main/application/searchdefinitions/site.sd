@@ -5,16 +5,14 @@ search site {
 
 document site {
 
-	field language type string{
-	indexing: 'en' | set_language
-	}
+	
         field text type string {
-          indexing:  index 
+          indexing:  summary 
 	    
         }
 
         field title type string {
-          indexing: index 
+          indexing: summary
         }
 
         field uri type string {
@@ -26,18 +24,18 @@ document site {
 
 
     
-    fieldset default {
-        fields: title, text
-    }
+   # fieldset default {
+   #     fields: title, text
+   # }
 
 
-    rank-profile post inherits default {
-
-        first-phase {
-            expression:nativeRank(title, text)
-        }
-
-    }
+#    rank-profile post inherits default {
+#
+ #       first-phase {
+  #          expression:nativeRank(title, text)
+  #      }
+#
+ #   }
 
 
  
