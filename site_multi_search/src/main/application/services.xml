@@ -31,10 +31,10 @@
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
- <node hostalias="content0" distribution-key="0"/>
-
-<node hostalias="content4" distribution-key="4"/>
- </nodes>
+      <node hostalias="content0" distribution-key="0"/>
+      <node hostalias="content4" distribution-key="4"/>
+      <node hostalias="content5" distribution-key="5"/> 
+</nodes>
 
     <engine>
       <proton>

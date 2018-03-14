@@ -27,4 +27,9 @@
     <alias>stateless4</alias>
     <alias>content4</alias>
   </host>
+<host name="cloud-11">
+    <alias>vespa5</alias>
+    <alias>stateless5</alias>
+    <alias>content5</alias>
+  </host>
 </hosts>
