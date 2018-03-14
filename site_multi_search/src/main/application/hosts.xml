@@ -22,12 +22,12 @@
     <alias>stateless3</alias>
     <alias>content3</alias>
   </host>
-<host name="cloud-10">
+<host name="cloud-11">
     <alias>vespa4</alias>
     <alias>stateless4</alias>
     <alias>content4</alias>
   </host>
-<host name="cloud-11">
+<host name="cloud-10">
     <alias>vespa5</alias>
     <alias>stateless5</alias>
     <alias>content5</alias>
