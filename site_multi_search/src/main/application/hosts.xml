@@ -2,13 +2,13 @@
 <!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
 <hosts>
   <host name="cloud-06">
-    <alias>node0</alias>
+    <alias>vespa0</alias>
     <alias>admin0</alias>
     <alias>stateless0</alias>
     <alias>content0</alias>
   </host>
   <host name="cloud-07">
-    <alias>node1</alias>
+    <alias>vespa1</alias>
     <alias>stateless1</alias>
     <alias>content1</alias>
   </host>
@@ -22,14 +22,27 @@
     <alias>stateless3</alias>
     <alias>content3</alias>
   </host>
-<host name="cloud-11">
+<host name="cloud-10">
     <alias>vespa4</alias>
     <alias>stateless4</alias>
     <alias>content4</alias>
   </host>
-<host name="cloud-10">
+<host name="cloud-11">
     <alias>vespa5</alias>
     <alias>stateless5</alias>
     <alias>content5</alias>
-  </host>
+</host>
+<host name="cloud-12">
+    <alias>vespa6</alias>
+    <alias>stateless6</alias>
+    <alias>content6</alias>
+</host>
+
+<host name="cloud-13">
+    <alias>vespa7</alias>
+    <alias>stateless7</alias>
+    <alias>content7</alias>
+</host>
+
+
 </hosts>
