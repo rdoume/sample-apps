@@ -5,14 +5,21 @@ search site {
 
 document site {
 
+	field language type string{
+	indexing: 'en' | set_language
+	}
 	
         field text type string {
-          indexing:  summary 
-	    
+        stemming:none 
+	normalizing:none  
+	indexing: summary |  index 
         }
 
         field title type string {
-          indexing: summary
+        indexing: summary | index
+	stemming:none 
+        normalizing:none
+
         }
 
         field uri type string {
