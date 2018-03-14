@@ -9,7 +9,7 @@
     </admin>
  
  <container id='container' version='1.0'>
-<document-processing preferlocalnode="true" maxqueuebytesize="4g" maxconcurrentfactor="0.99" />
+<document-processing preferlocalnode="true" maxqueuebytesize="10g" maxconcurrentfactor="0.99" />
     <search/>
    <document-api>
 <maxpendingbytes>409600000</maxpendingbytes>

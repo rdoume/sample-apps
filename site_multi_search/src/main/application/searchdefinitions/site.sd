@@ -16,33 +16,31 @@ document site {
         }
 
         field title type string {
-        indexing: summary | index
+        
 	stemming:none 
         normalizing:none
-
+        indexing: summary | index
         }
 
         field uri type string {
                    
 				 }
 
-
     }
 
 
     
-   # fieldset default {
-   #     fields: title, text
-   # }
+    fieldset default {
+        fields: title, text
+    }
 
 
-#    rank-profile post inherits default {
-#
- #       first-phase {
-  #          expression:nativeRank(title, text)
-  #      }
-#
- #   }
+    rank-profile post inherits default {
+
+        first-phase {
+            expression:nativeRank(title, text)
+        }
+   }
 
 
  
