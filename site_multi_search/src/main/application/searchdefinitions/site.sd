@@ -12,14 +12,14 @@ document site {
         field text type string {
         stemming:none 
 	normalizing:none  
-	indexing:  index 
+	indexing: summary |  index 
         }
 
         field title type string {
         
 	stemming:none 
         normalizing:none
-        indexing:  index
+        indexing:  summary | index
         }
 
         field uri type string {
