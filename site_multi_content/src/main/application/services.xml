@@ -7,7 +7,7 @@
         <configserver hostalias="admin0"/>
         </configservers>
     </admin>
- 
+
  <container id='container' version='1.0'>
 <document-processing preferlocalnode="true" maxqueuebytesize="4g" maxconcurrentfactor="0.99" />
     <search/>
@@ -15,25 +15,22 @@
 <maxpendingbytes>409600000</maxpendingbytes>
  </document-api>
     <nodes>
-      <node hostalias="stateless1"/>
+      <node hostalias="stateless0"/>
     </nodes>
-  
+
   </container>
 
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
     <search>
       <visibility-delay>500</visibility-delay>
-    </search>    
+    </search>
          <documents>
       <document mode='index' type='site'/>
     </documents>
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
-      <node hostalias="content3" distribution-key="3"/>
-      <node hostalias="content0" distribution-key="0"/>
-      <node hostalias="content4" distribution-key="4"/>
-      <node hostalias="content5" distribution-key="5"/> 
+      <node hostalias="content1" distribution-key="1"/>
 </nodes>
 
     <engine>
