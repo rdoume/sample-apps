@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
+<services version='1.0'>
+  <admin version="2.0">
+      <adminserver hostalias="admin0"/>
+      <configservers>
+        <configserver hostalias="admin0"/>
+        </configservers>
+    </admin>
+
+ <container id='container' version='1.0'>
+<document-processing preferlocalnode="true" maxqueuebytesize="4g" maxconcurrentfactor="0.99" />
+    <search/>
+   <document-api>
+<maxpendingbytes>409600000</maxpendingbytes>
+ </document-api>
+    <nodes>
+      <node hostalias="stateless0"/>
+    </nodes>
+
+  </container>
+
+  <content id='site' version='1.0'>
+    <redundancy>1</redundancy>
+    <search>
+      <visibility-delay>500</visibility-delay>
+    </search>
+         <documents>
+      <document mode='index' type='site'/>
+    </documents>
+    <nodes>
+      <node hostalias="content1" distribution-key="1"/>
+</nodes>
+    <engine>
+      <proton>
+        <searchable-copies>1</searchable-copies>
+        <resource-limits>
+          <disk>0.99</disk>
+          <memory>0.95</memory>
+         </resource-limits>
+ 	<tuning>
+        <searchnode>
+        <feeding>
+          <concurrency>0.8</concurrency>
+        </feeding>
+	<resizing>
+    		<initialdocumentcount>1000000000</initialdocumentcount>
+	</resizing>
+        </searchnode>
+     </tuning>
+      </proton>
+    </engine>
+  </content>
+
+</services>

@@ -9,7 +9,7 @@
     </admin>
  
  <container id='container' version='1.0'>
-<document-processing preferlocalnode="true" maxqueuebytesize="10g" maxconcurrentfactor="0.99" />
+<document-processing preferlocalnode="true" maxqueuebytesize="4g" maxconcurrentfactor="0.99" />
     <search/>
    <document-api>
 <maxpendingbytes>409600000</maxpendingbytes>
@@ -23,19 +23,17 @@
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
     <search>
-      <visibility-delay>120</visibility-delay>
+      <visibility-delay>500</visibility-delay>
     </search>    
          <documents>
       <document mode='index' type='site'/>
     </documents>
     <nodes>
-      <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
+      <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content4" distribution-key="4"/>
       <node hostalias="content5" distribution-key="5"/> 
-      <node hostalias="content6" distribution-key="6"/>
-      <node hostalias="content7" distribution-key="7"/>
 </nodes>
 
     <engine>
