@@ -4,7 +4,7 @@
 .vagrant/
 
 site_multi_search/outb\.json
-bench_q/*
+
 site_multi_search/vespa_inject\.json
 
 site_multi_search/vespa_inject\.tar\.gz

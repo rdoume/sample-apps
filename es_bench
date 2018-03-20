@@ -1,0 +1,5 @@
+{"query": {"query_string": {"query": "${__eval(${google})}"}}}
+{"query": {"query_string": {"query": "${__eval(${facebook})}"}}}
+{"query": {"query_string": {"query": "${__eval(${yahoo})}"}}}
+{"query": {"query_string": {"query": "${__eval(${le bon coin})}"}}}
+{"query": {"query_string": {"query": "${__eval(${titit})}"}}}
