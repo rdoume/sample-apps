@@ -1,0 +1,4 @@
+bash -c 'sudo docker rm  -f vespa08' && \
+bash -c 'cd $VESPA_VAR_STORAGE/ && cd .. && sudo rm -rf var && sudo rm -rf logs && sudo mkdir var && sudo mkdir logs && cd $VESPA_SAMPLE_APPS/' && \
+bash -c 'sudo docker run --detach --name vespa08 --hostname cloud-08  --net host --privileged  --volume $VESPA_SAMPLE_APPS:/vespa-sample-apps --volume $VESPA_VAR_STORAGE:/opt/vespa/var  -p8080:8080  vespaengine/vespa'
+bash -c " sudo docker exec vespa08 bash -c ' 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost:19071/ApplicationStatus)" != "200" ]]; do sleep 5; done' "

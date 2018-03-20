@@ -1,0 +1,47 @@
+# Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+
+search site {
+
+
+document site {
+
+	field language type string{
+	indexing: 'en' | set_language
+	}
+	
+        field text type string {
+        stemming:none 
+	normalizing:none  
+	indexing: summary |  index 
+        }
+
+        field title type string {
+        
+	stemming:none 
+        normalizing:none
+        indexing: summary | index
+        }
+
+        field uri type string {
+                   
+				 }
+
+    }
+
+
+    
+    fieldset default {
+        fields: title, text
+    }
+
+
+    rank-profile post inherits default {
+
+        first-phase {
+            expression:nativeRank(title, text)
+        }
+   }
+
+
+ 
+}

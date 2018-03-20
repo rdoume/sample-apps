@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
+<hosts>
+  <host name="cloud-09">
+    <alias>vespa0</alias>
+    <alias>stateless0</alias>
+    <alias>content0</alias>
+  </host>
+<host name="cloud-10">
+    <alias>vespa1</alias>
+    <alias>stateless1</alias>
+    <alias>content1</alias>
+  </host>
+
+</hosts>
