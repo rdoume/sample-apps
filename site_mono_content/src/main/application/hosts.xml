@@ -3,6 +3,7 @@
 <hosts>
   <host name="cloud-09">
     <alias>vespa0</alias>
+    <alias>admin0</alias>
     <alias>stateless0</alias>
     <alias>content0</alias>
   </host>
