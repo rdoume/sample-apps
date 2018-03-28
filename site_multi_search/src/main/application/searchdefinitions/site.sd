@@ -12,14 +12,15 @@ document site {
         field text type string {
         stemming:none 
 	normalizing:none  
-	indexing: summary |  index 
+	indexing: attribute 
+	 
         }
 
         field title type string {
         
 	stemming:none 
         normalizing:none
-        indexing:  summary | index
+        indexing:  attribute 
         }
 
         field uri type string {
@@ -28,15 +29,17 @@ document site {
 
     }
 
-
+    
     
     fieldset default {
-        fields: title, text
+              fields: title,text
+  
     }
 
 
     rank-profile post inherits default {
-
+	rank-type text: about
+	rank-type title: about
         first-phase {
             expression:nativeRank(title, text)
         }

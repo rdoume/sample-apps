@@ -51,6 +51,17 @@
 	<resizing>
     		<initialdocumentcount>1000000000</initialdocumentcount>
 	</resizing>
+        <summary>
+              <io>
+                <read>directio</read>
+              </io>
+              <store>
+<cache>
+                  <maxsize>8589934592</maxsize><!--1GB -->
+                </cache>
+              </store>
+            </summary>
+
         </searchnode>
      </tuning>
       </proton>
