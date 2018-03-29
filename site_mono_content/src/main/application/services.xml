@@ -36,12 +36,12 @@
         <searchable-copies>1</searchable-copies>
         <resource-limits>
           <disk>0.99</disk>
-          <memory>0.95</memory>
+          <memory>1</memory>
          </resource-limits>
  	<tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.8</concurrency>
+          <concurrency>1</concurrency>
         </feeding>
 	<resizing>
     		<initialdocumentcount>1000000000</initialdocumentcount>

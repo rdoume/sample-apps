@@ -10,16 +10,16 @@ document site {
 	}
 	
         field text type string {
-        stemming:none 
+         
 	normalizing:none  
-	indexing: summary |  index 
+	indexing: attribute 
         }
 
         field title type string {
         
 	stemming:none 
         normalizing:none
-        indexing: summary | index
+        indexing: attribute
         }
 
         field uri type string {
