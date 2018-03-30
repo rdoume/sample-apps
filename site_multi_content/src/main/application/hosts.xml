@@ -17,4 +17,26 @@
    <alias>stateless2</alias>
    <alias>content2</alias>
   </host>
+  <host name="cloud-09">
+   <alias>content3</alias>
+  </host>
+  <host name="cloud-10">
+   <alias>content4</alias>
+  </host>
+  <host name="cloud-01">
+   <alias>content5</alias>
+  </host>
+  <host name="cloud-02">
+   <alias>content6</alias>
+  </host>
+  <host name="cloud-03">
+   <alias>content7</alias>
+  </host>
+  <host name="cloud-04">
+   <alias>content8</alias>
+  </host>
+   <host name="cloud-05">
+     <alias>content9</alias>
+  </host>
+
 </hosts>

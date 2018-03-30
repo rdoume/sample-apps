@@ -21,16 +21,24 @@
   </container>
 
   <content id='site' version='1.0'>
-    <redundancy>1</redundancy>
+    <redundancy>2</redundancy>
     <search>
-      <visibility-delay>5</visibility-delay>
+      <visibility-delay>60</visibility-delay>
     </search>
          <documents>
       <document mode='index' type='site'/>
     </documents>
     <nodes>
-      <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content1" distribution-key="1"/>
+      <node hostalias="content2" distribution-key="2"/>
+      <node hostalias="content3" distribution-key="3"/>
+      <node hostalias="content4" distribution-key="4"/>
+      <node hostalias="content5" distribution-key="5"/>
+      <node hostalias="content6" distribution-key="6"/>
+      <node hostalias="content7" distribution-key="7"/>
+      <node hostalias="content8" distribution-key="8"/>
+      <node hostalias="content9" distribution-key="9"/>
+
 </nodes>
 
     <engine>
