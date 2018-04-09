@@ -23,6 +23,9 @@ document news {
  field article_author type array<string>{	indexing : summary | attribute 
     
 }
+field entities type array<string>{	indexing : summary | attribute 
+    
+}
 
 
 
