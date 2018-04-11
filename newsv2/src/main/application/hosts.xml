@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
 <hosts>
-  <host name="localhost">
+  <host name="cloud-06">
     <alias>vespa0</alias>
     <alias>admin0</alias>
     <alias>stateless0</alias>
     <alias>content0</alias>
+  </host>
+  <host name="cloud-07">
+    <alias>vespa1</alias>
+    <alias>admin1</alias>
+    <alias>stateless1</alias>
+    <alias>content1</alias>
   </host>
 </hosts>

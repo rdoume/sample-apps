@@ -28,7 +28,7 @@
       <document mode='index' type='newsv2'/>
     </documents>
     <nodes>
-      <node hostalias="content0" distribution-key="0"/>
+      <node hostalias="content1" distribution-key="0"/>
 </nodes>
     <engine>
       <proton>
