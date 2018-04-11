@@ -1,0 +1,147 @@
+search newsv2 {
+
+
+document newsv2 
+{
+
+
+    field body type string
+    {
+        normalizing:none  
+        indexing: summary  | index 
+    }
+    
+    field boost type float{}
+
+    field category type string
+    {
+        indexing :summary | attribute
+
+    }
+
+
+    field category_id type string
+    {	
+        indexing : summary | attribute 
+    
+    }
+    
+    field country type string
+    {
+        indexing : summary | attribute 
+    }   
+
+    field description type string
+    {
+        indexing: summary  | index 
+    }
+
+    field domain type string 
+    {
+        indexing: attribute | summary 
+    }
+
+    field groupHash type long
+    {
+
+    }
+    field hashSignature type array<float>
+    {
+
+    }
+
+    field hostsite type string
+    {
+        indexing: summary | index
+    }
+    field index_date type string
+    {
+        indexing: summary | index
+    }
+
+    field keywords type array<string>
+    {
+        indexing: summary 
+    }
+
+
+    field lastmod type string
+    {
+        indexing : attribute
+    }
+    
+    field media type string
+    {
+        indexing : summary
+    }
+
+    field metaData type string
+    {
+        indexing: summary  
+    }
+    field mobile type string{}
+
+    field published_date type string{}
+    field qrank type int
+    {
+        indexing :summary | attribute
+    }
+
+    field region type string
+    {
+        indexing : attribute
+    }
+    field slug type string{	}
+    
+    field stemmedKeywords type array<string>
+    {
+        indexing : summary
+    }
+     field subCategory type string
+    {
+        indexing : summary
+    }
+    field timestamp type long{
+
+    }
+    field title type string{ 
+    indexing: index
+
+    }
+
+    field universevalid type int{
+
+    }
+    field url type uri {
+
+    }
+    field weight type int {
+
+    } 
+        field language type string
+    {
+        indexing : summary | attribute
+    }
+    
+    field authors type array<string>
+    {
+        indexing: summary   
+    }
+}
+
+    
+    fieldset default {
+        fields: title, body, description
+    }
+
+
+    rank-profile post inherits default {
+
+        first-phase {
+            expression:nativeRank(title, body, description)
+        }
+   }
+
+
+ 
+}

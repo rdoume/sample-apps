@@ -1,61 +1,87 @@
-# Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
-
 search news {
 
 
-document news {
+document news 
+{
 
-	field article_language type string{
-	indexing : summary | attribute
-	}
-	
-        field article_text type string {
-         
-	normalizing:none  
-	indexing: summary  | index 
-        }
-
-        field article_title type string {	indexing :summary | attribute
-  
-        }
-
-
- field article_author type array<string>{	indexing : summary | attribute 
+    field article_language type string
+    {
+        indexing : summary | attribute
+    }
     
-}
-field entities type array<string>{	indexing : summary | attribute 
+    field article_text type string
+    {
+        normalizing:none  
+        indexing: summary  | index 
+    }
+
+    field article_title type string
+    {
+        indexing :summary | attribute
+
+    }
+
+
+    field article_author type array<string>
+    {	
+        indexing : summary | attribute 
     
-}
-
-
+    }
+    
+    field entities type array<string>
+    {
+        indexing : summary | attribute 
+    }   
 
     field download_date type string { }
 
-    field modified_date type string { indexing: attribute | summary }
+    field modified_date type string 
+    {
+        indexing: attribute | summary 
+    }
 
-    field article_publish_date type string{indexing: attribute | summary }
+    field article_publish_date type string
+    {
+        indexing: attribute | summary 
+    }
 
-    field article_description type string{indexing: summary | index}
+    field article_description type string
+    {
+        indexing: summary | index
+    }
 
-    field article_image type uri{indexing: summary}
+    field article_image type uri
+    {
+        indexing: summary
+    }
 
 
     field abs_local_path type string{ }
     field local_path type string{}
 
-    field source_domain type string{
-    indexing: summary | attribute 
+    field source_domain type string
+    {
+        indexing: summary | attribute 
     }
     field spider_response type string{}
     field html_title type string{}
-    field title_page type string{	indexing :summary | attribute}
+    field title_page type string
+    {
+        indexing :summary | attribute
+    }
 
-    field rss_title type string{	indexing : attribute}
+    field rss_title type string
+    {
+        indexing : attribute
+    }
     field filename type string{	}
 
-    field url type uri{indexing : summary }
-
+    field url type uri
+    {
+        indexing : summary
     }
+
+}
 
     
     fieldset default {
