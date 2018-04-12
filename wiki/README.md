@@ -34,7 +34,7 @@ $ curl -s --head http://localhost:8080/ApplicationStatus
 **Feed data into application:**
 <pre data-test="exec">
 $ docker exec vespa bash -c 'java -jar /opt/vespa/lib/jars/vespa-http-client-jar-with-dependencies.jar --verbose \
-  --file /vespa-sample-apps/blog-search/blog-sample-data.json --host localhost --port 8080'
+  --file /vespa-sample-apps/wiki/wiki_search.json --host localhost --port 8080'
 </pre>
     You can also feed with the example script here
 **Test the application:**
