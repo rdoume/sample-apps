@@ -1,0 +1,39 @@
+# Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root.
+search wiki_article {
+
+    document wiki_article {
+
+
+        field title type string {
+            indexing: summary | index
+        }
+
+        field text type string {
+            indexing: summary | index
+        }
+
+        field id type string {
+            indexing: summary | attribute
+        }
+
+        field url type string {
+            indexing: summary 
+        }
+
+    }
+
+
+    fieldset default {
+        fields: title, text
+    }
+
+
+    rank-profile post inherits default {
+
+        first-phase {
+            expression:nativeRank(title, text)
+        }
+
+    }
+
+}
