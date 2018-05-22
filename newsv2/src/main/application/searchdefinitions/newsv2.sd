@@ -167,12 +167,12 @@ document newsv2
         }
 
         macro normalrank() {
-          expression: (nativeRank(title,body) + query(qualityWeight) * quality
+          expression: (nativeRank(title,body) + query(qualityWeight) * quality)
         }
 
         #ranking function that runs over all matched documents, determined by the boolean query logic
         first-phase {
-          expression: if(quality < query(qualityLimit), normalrank/normalization, (normalrank + query(deservesFreshness) * freshness))/normalization)
+          expression: if(quality < query(qualityLimit), normalrank/normalization, (normalrank + query(deservesFreshness) * freshness))/normalization
         }
 
         summary-features: nativeRank(title,body) age(timestamp) rankingExpression(freshness@) rankingExpression(quality@)
