@@ -143,20 +143,12 @@ document newsv2
 
     rank-profile news inherits default {
         weight title: 200
-<<<<<<< HEAD
-        weight body: 100
+        weight body: 200
 
         rank-properties {
           $textMatchWeight: 0.4 #pre-configured weights, can be overridden at query time
           $qualityWeight: 0.3
           $deservesFreshness: 0.8
-=======
-        weight body: 200
-        rank-properties {
-          $textMatchWeight: 0.4 #pre-configured weights, can be overridden at query time
-          $qualityWeight: 0.1
-          $deservesFreshness: 0.3
->>>>>>> cbe18f3fa7efa7b944e865b353cdf9d1e2447116
           $qualityLimit: 0.4
           nativeFieldMatch.occurrenceCountTable.title: "linear(0,1)" #Example of nativeRank tuning, override the occurrence boost shape to be flat
         }
@@ -184,11 +176,8 @@ document newsv2
           expression: if(quality < query(qualityLimit), normalrank/normalization, (normalrank + query(deservesFreshness) * freshness)/normalization)
         }
 
-<<<<<<< HEAD
-        summary-features: nativeRank(title,body) rankingExpression(quality) age(timestamp) rankingExpression(freshness)  
-=======
         summary-features: nativeRank(title,body) age(timestamp) rankingExpression(freshness) rankingExpression(quality)
->>>>>>> cbe18f3fa7efa7b944e865b353cdf9d1e2447116
+
       }
 
 
