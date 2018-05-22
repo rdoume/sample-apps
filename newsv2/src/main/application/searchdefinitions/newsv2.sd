@@ -143,10 +143,10 @@ document newsv2
 
     rank-profile news inherits default {
         weight title: 200
-        weight body: 100
+        weight body: 200
         rank-properties {
           $textMatchWeight: 0.4 #pre-configured weights, can be overridden at query time
-          $qualityWeight: 0.3
+          $qualityWeight: 0.1
           $deservesFreshness: 0.3
           $qualityLimit: 0.4
           nativeFieldMatch.occurrenceCountTable.title: "linear(0,1)" #Example of nativeRank tuning, override the occurrence boost shape to be flat
@@ -172,10 +172,10 @@ document newsv2
 
         #ranking function that runs over all matched documents, determined by the boolean query logic
         first-phase {
-          expression: if(quality < query(qualityLimit), normalrank/normalization, (normalrank + query(deservesFreshness) * freshness))/normalization
+          expression: if(quality < query(qualityLimit), normalrank/normalization, (normalrank + query(deservesFreshness) * freshness)/normalization)
         }
 
-        summary-features: nativeRank(title,body) age(timestamp) 
+        summary-features: nativeRank(title,body) age(timestamp) rankingExpression(freshness) rankingExpression(quality)
       }
 
 
