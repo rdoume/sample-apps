@@ -1,44 +1,44 @@
 search newsv2 {
 
 
-document newsv2 
+document newsv2
 {
 
 
     field body type string
     {
-        normalizing:none  
-        indexing: summary  | index 
+        normalizing:none
+        indexing: summary  | index
     }
-    
+
     field boost type float{}
 
     field category type string
     {
-        indexing :summary | attribute
+        indexing : summary | attribute
 
     }
 
 
     field category_id type string
-    {	
-        indexing : summary | attribute 
-    
+    {
+        indexing : summary | attribute
+
     }
-    
+
     field country type string
     {
-        indexing : summary | attribute 
-    }   
+        indexing : summary | attribute
+    }
 
     field description type string
     {
-        indexing: summary  | index 
+        indexing: summary  | index
     }
 
-    field domain type string 
+    field domain type string
     {
-        indexing: attribute | summary 
+        indexing: attribute | summary
     }
 
     field groupHash type long
@@ -61,15 +61,15 @@ document newsv2
 
     field entities type array<string>
     {
-        indexing: summary 
+        indexing: summary
     }
 
 
     field lastmod type string
     {
-        indexing : attribute
+        indexing : summary | attribute
     }
-    
+
     field media type string
     {
         indexing : summary
@@ -77,7 +77,7 @@ document newsv2
 
     field metaData type string
     {
-        indexing: summary  
+        indexing: summary
     }
     field mobile type string{}
 
@@ -94,7 +94,7 @@ document newsv2
         indexing : attribute
     }
     field slug type string{	}
-    
+
     field stemmedKeywords type array<string>
     {
         indexing : summary
@@ -108,46 +108,47 @@ document newsv2
     }
     field title type string{ 
     indexing: summary | index
-
     }
 
     field universevalid type int{
 
     }
     field url type uri {
-
+	indexing : summary
     }
+
     field weight type int {
 
+
     } 
-    field language type string
+    
+    
+        field language type string
     {
         indexing : summary | attribute
     }
-    
+
     field authors type array<string>
     {
-        indexing: summary   
+        indexing: summary
     }
 }
 
-    
   
+  
+
     fieldset default {
-        fields: title, body, description
+        fields: title, body
     }
 
 
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(title, body, description)
+            expression:nativeRank(title, body)
         }
    }
   
   
 }
-
-
- 
 
