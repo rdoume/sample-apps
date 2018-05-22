@@ -45,7 +45,7 @@ document newsv2
     {
 
     }
-    field hashSignature type array<float>
+    field vector type array<float>
     {
 
     }
@@ -59,7 +59,7 @@ document newsv2
         indexing: summary | index
     }
 
-    field keywords type array<string>
+    field entities type array<string>
     {
         indexing: summary 
     }
@@ -81,7 +81,9 @@ document newsv2
     }
     field mobile type string{}
 
-    field published_date type string{}
+    field published_date type string{
+	indexing: summary 
+	}
     field qrank type int
     {
         indexing :summary | attribute
@@ -102,10 +104,10 @@ document newsv2
         indexing : summary
     }
     field timestamp type long{
-
+	 indexing :summary | attribute
     }
     field title type string{ 
-    indexing: index
+    indexing: summary | index
 
     }
 
@@ -118,7 +120,7 @@ document newsv2
     field weight type int {
 
     } 
-        field language type string
+    field language type string
     {
         indexing : summary | attribute
     }
@@ -130,6 +132,7 @@ document newsv2
 }
 
     
+  
     fieldset default {
         fields: title, body, description
     }
@@ -141,7 +144,10 @@ document newsv2
             expression:nativeRank(title, body, description)
         }
    }
+  
+  
+}
 
 
  
-}
+

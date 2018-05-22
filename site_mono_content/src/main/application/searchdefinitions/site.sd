@@ -10,9 +10,10 @@ document site {
 	}
 	
         field text type string {
-         
+        match: word 
 	normalizing:none  
 	indexing: attribute | index 
+	 
         }
 
         field title type string {

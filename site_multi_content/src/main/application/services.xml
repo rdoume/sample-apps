@@ -16,6 +16,7 @@
  </document-api>
     <nodes>
       <node hostalias="stateless0"/>
+    <node hostalias="stateless3"/>
     </nodes>
 
   </container>
