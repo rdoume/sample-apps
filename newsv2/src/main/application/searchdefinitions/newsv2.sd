@@ -82,7 +82,7 @@ document newsv2
     field mobile type string{}
 
     field published_date type string{
-	indexing: summary 
+	indexing: summary
 	}
     field qrank type int
     {
@@ -106,7 +106,7 @@ document newsv2
     field timestamp type long{
 	 indexing :summary | attribute
     }
-    field title type string{ 
+    field title type string{
     indexing: summary | index
     }
 
@@ -120,9 +120,9 @@ document newsv2
     field weight type int {
 
 
-    } 
-    
-    
+    }
+
+
         field language type string
     {
         indexing : summary | attribute
@@ -134,8 +134,8 @@ document newsv2
     }
 }
 
-  
-  
+
+
 
     fieldset default {
         fields: title, body
@@ -145,10 +145,9 @@ document newsv2
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(title, body)
+            expression:nativeRank(title, body) + 10 * if(isNan(attribute(qrank)), 0, attribute(qrank))
         }
    }
-  
-  
-}
 
+
+}
