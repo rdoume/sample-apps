@@ -160,7 +160,7 @@ document newsv2
         #our quality rank feature
         macro quality() {
           expression: attribute(qrank)
-
+          }
         #normalization factor for the weighted sum
         macro normalization() {
           expression: $textMatchWeight + $qualityWeight + $deservesFreshness
