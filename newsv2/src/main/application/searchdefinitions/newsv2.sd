@@ -145,7 +145,7 @@ document newsv2
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(title, body) + 10 * if(isNan(attribute(qrank)), 0, attribute(qrank))
+            expression:nativeRank(title, body) + 0.1 * if(isNan(attribute(qrank)), 0, attribute(qrank))
         }
    }
 
