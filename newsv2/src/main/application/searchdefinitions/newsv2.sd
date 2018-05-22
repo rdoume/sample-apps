@@ -177,7 +177,8 @@ document newsv2
 
         summary-features: nativeRank(title,body) age(timestamp) rankingExpression(freshness@) rankingExpression(quality@)
       }
-    }
+
+
     rank-profile post inherits default {
 
         first-phase {
