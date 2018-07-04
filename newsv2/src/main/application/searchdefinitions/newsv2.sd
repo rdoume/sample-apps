@@ -144,17 +144,18 @@ document newsv2
     rank-profile news inherits default {
         weight title: 200
         weight body: 200
+
         rank-properties {
           $textMatchWeight: 0.4 #pre-configured weights, can be overridden at query time
-          $qualityWeight: 0.1
-          $deservesFreshness: 0.3
+          $qualityWeight: 0.3
+          $deservesFreshness: 0.8
           $qualityLimit: 0.4
           nativeFieldMatch.occurrenceCountTable.title: "linear(0,1)" #Example of nativeRank tuning, override the occurrence boost shape to be flat
         }
 
         #our freshness rank feature
         macro freshness() {
-          expression: exp(-1 * age(timestamp)/(3600*12))
+          expression: 10+exp(-1 * age(timestamp)/(3600*12))
         }
 
         #our quality rank feature
@@ -176,13 +177,14 @@ document newsv2
         }
 
         summary-features: nativeRank(title,body) age(timestamp) rankingExpression(freshness) rankingExpression(quality)
+
       }
 
 
     rank-profile post inherits default {
 
         first-phase {
-            expression:nativeRank(title, body) + 10 * if(isNan(attribute(qrank)), 0, attribute(qrank))
+            expression:nativeRank(title, body) + 0.1 * if(isNan(attribute(qrank)), 0, attribute(qrank))
         }
    }
 
