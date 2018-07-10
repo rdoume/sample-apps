@@ -15,7 +15,7 @@
 <maxpendingbytes>409600000</maxpendingbytes>
  </document-api>
     <nodes>
-      <node hostalias="stateless1"/>
+      <node hostalias="stateless0"/>
     </nodes>
   
   </container>
@@ -31,7 +31,6 @@
     <nodes>
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
-      <node hostalias="content0" distribution-key="0"/>
       <node hostalias="content4" distribution-key="4"/>
       <node hostalias="content5" distribution-key="5"/> 
 </nodes>
@@ -46,7 +45,7 @@
  	<tuning>
         <searchnode>
         <feeding>
-          <concurrency>1</concurrency>
+          <concurrency>0.99</concurrency>
         </feeding>
 	<resizing>
     		<initialdocumentcount>1000000000</initialdocumentcount>
