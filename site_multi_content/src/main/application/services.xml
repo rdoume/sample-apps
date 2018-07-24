@@ -2,9 +2,9 @@
 <!-- Copyright 2017 Yahoo Holdings. Licensed under the terms of the Apache 2.0 license. See LICENSE in the project root. -->
 <services version='1.0'>
   <admin version="2.0">
-      <adminserver hostalias="admin0"/>
+      <adminserver hostalias="admin1"/>
       <configservers>
-        <configserver hostalias="admin0"/>
+        <configserver hostalias="admin1"/>
         </configservers>
     </admin>
 
@@ -15,8 +15,7 @@
 <maxpendingbytes>409600000</maxpendingbytes>
  </document-api>
     <nodes>
-      <node hostalias="stateless0"/>
-    <node hostalias="stateless3"/>
+      <node hostalias="stateless1"/>
     </nodes>
 
   </container>
@@ -32,14 +31,6 @@
     <nodes>
       <node hostalias="content1" distribution-key="1"/>
       <node hostalias="content2" distribution-key="2"/>
-      <node hostalias="content3" distribution-key="3"/>
-      <node hostalias="content4" distribution-key="4"/>
-      <node hostalias="content5" distribution-key="5"/>
-      <node hostalias="content6" distribution-key="6"/>
-      <node hostalias="content7" distribution-key="7"/>
-      <node hostalias="content8" distribution-key="8"/>
-      <node hostalias="content9" distribution-key="9"/>
-
 </nodes>
 
     <engine>
