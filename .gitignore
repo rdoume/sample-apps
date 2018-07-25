@@ -3,9 +3,12 @@
 *~
 .vagrant/
 
+
 site_multi_search/outb\.json
 
 site_multi_search/vespa_inject\.json
 
 site_multi_search/vespa_inject\.tar\.gz
 rmall.sh
+.DS_Store
+
