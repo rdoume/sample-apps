@@ -12,8 +12,8 @@
 <document-processing preferlocalnode="true" maxqueuebytesize="10g" maxconcurrentfactor="0.99" />
     <search/>
    <document-api>
-<maxpendingbytes>0</maxpendingbytes>
-<maxpendingbytes>0</maxpendingbytes>
+
+<maxpendingdocs>0</maxpendingdocs>
  </document-api>
     <nodes>
       <node hostalias="stateless0"/>
