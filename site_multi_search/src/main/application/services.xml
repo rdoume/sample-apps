@@ -9,14 +9,16 @@
     </admin>
  
  <container id='container' version='1.0'>
-<document-processing preferlocalnode="true" maxqueuebytesize="10g" maxconcurrentfactor="0.99" />
+<document-processing preferlocalnode="true" maxqueuebytesize="100g" maxconcurrentfactor="0.99" />
     <search/>
    <document-api>
 
-<maxpendingdocs>1000000</maxpendingdocs>
+<maxpendingdocs>10000000</maxpendingdocs>
  </document-api>
     <nodes>
       <node hostalias="stateless0"/>
+      <node hostalias="stateless0"/>
+
     </nodes>
   
   </container>
@@ -24,7 +26,7 @@
   <content id='site' version='1.0'>
     <redundancy>1</redundancy>
     <search>
-      <visibility-delay>60</visibility-delay>
+      <visibility-delay>120</visibility-delay>
     </search>    
          <documents>
       <document mode='index' type='site'/>
@@ -46,7 +48,7 @@
  	<tuning>
         <searchnode>
         <feeding>
-          <concurrency>0.99</concurrency>
+          <concurrency>1</concurrency>
         </feeding>
 	<resizing>
     		<initialdocumentcount>100000000</initialdocumentcount>
@@ -57,7 +59,7 @@
               </io>
               <store>
             <cache>
-                  <maxsize>8589934592</maxsize><!--1GB -->
+                  <maxsize>18589934592</maxsize><!--1GB -->
                 </cache>
               </store>
             </summary>
