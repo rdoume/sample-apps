@@ -29,10 +29,10 @@
       <document mode='index' type='site'/>
     </documents>
     <nodes>
+      <node hostalias="content1" distribution-key="1"/> 
       <node hostalias="content2" distribution-key="2"/>
       <node hostalias="content3" distribution-key="3"/>
       <node hostalias="content4" distribution-key="4"/>
-      <node hostalias="content1" distribution-key="1"/> 
 </nodes>
 
     <engine>
@@ -48,7 +48,7 @@
           <concurrency>0.99</concurrency>
         </feeding>
 	<resizing>
-    		<initialdocumentcount>1000000000</initialdocumentcount>
+    		<initialdocumentcount>100000000</initialdocumentcount>
 	</resizing>
         <summary>
               <io>
