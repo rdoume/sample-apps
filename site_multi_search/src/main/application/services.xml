@@ -9,13 +9,14 @@
     </admin>
  
  <container id='container' version='1.0'>
-<document-processing preferlocalnode="true"  maxconcurrentfactor="0.99" />
+<document-processing preferlocalnode="true" maxqueuebytesize="10g" maxconcurrentfactor="0.99" />
     <search/>
    <document-api>
+<maxpendingbytes>0</maxpendingbytes>
+<maxpendingbytes>0</maxpendingbytes>
  </document-api>
     <nodes>
       <node hostalias="stateless0"/>
-      <node hostalias="stateless1"/>
     </nodes>
   
   </container>
@@ -48,10 +49,14 @@
           <concurrency>0.99</concurrency>
         </feeding>
 	<resizing>
+    		<initialdocumentcount>100000000</initialdocumentcount>
 	</resizing>
         <summary>
+              <io>
+                <read>directio</read>
+              </io>
               <store>
-<cache>
+            <cache>
                   <maxsize>8589934592</maxsize><!--1GB -->
                 </cache>
               </store>
