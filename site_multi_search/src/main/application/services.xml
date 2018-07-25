@@ -17,8 +17,11 @@
  </document-api>
     <nodes>
       <node hostalias="stateless0"/>
-      <node hostalias="stateless0"/>
-
+      <node hostalias="stateless1"/>
+      <node hostalias="stateless2"/>
+      <node hostalias="stateless3"/>
+      <node hostalias="stateless4"/>
+      
     </nodes>
   
   </container>
