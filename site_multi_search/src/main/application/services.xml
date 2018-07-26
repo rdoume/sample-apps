@@ -39,6 +39,7 @@
       <node hostalias="content3" distribution-key="3"/>
       <node hostalias="content4" distribution-key="4"/>
       <node hostalias="content1" distribution-key="1"/> 
+      <node hostalias="content0" distribution-key="0"/> 
 </nodes>
 
     <engine>
